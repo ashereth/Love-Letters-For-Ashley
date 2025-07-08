@@ -12,7 +12,7 @@ class Messages extends Phaser.Scene {
             fill: '#FFFFFF'
         }).setOrigin(0.5);
 
-        fetch('https://https://love-letters-for-ashley.vercel.app//api/loveMessage')
+        fetch('https://https://love-letters-for-ashley.vercel.app/api/loveMessage')
             .then(res => {
                 console.log("Response status:", res.status);
                 return res.json();
