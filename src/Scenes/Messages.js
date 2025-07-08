@@ -7,7 +7,7 @@ class Messages extends Phaser.Scene {
         const centerX = this.cameras.main.centerX;
         const centerY = this.cameras.main.centerY;
 
-        this.add.text(centerX, centerY - 100, 'Loading love message...', {
+        this.add.text(centerX, centerY - 100, 'Loading love message❤️❤️❤️', {
             fontSize: '32px',
             fill: '#FFFFFF'
         }).setOrigin(0.5);
