@@ -3,6 +3,7 @@ class Messages extends Phaser.Scene {
         super("Messages");
     }
 
+    
     create() {
         const centerX = this.cameras.main.centerX;
         const centerY = this.cameras.main.centerY;
