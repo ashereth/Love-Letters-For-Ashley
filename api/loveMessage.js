@@ -1,4 +1,7 @@
 export default async function handler(req, res) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     // generate random number between 0 and 10
     const randomNumber = Math.floor(Math.random() * 10);
     const loveMessages = [
