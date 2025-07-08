@@ -12,9 +12,13 @@ class Messages extends Phaser.Scene {
             fill: '#FFFFFF'
         }).setOrigin(0.5);
 
-        fetch('https://love-letters-for-ashley.vercel.app/') // Replace with your actual URL
-            .then(res => res.json())
+        fetch("https://your-vercel-project.vercel.app/api/loveMessage") // Replace this!
+            .then(res => {
+                console.log("Response status:", res.status);
+                return res.json();
+            })
             .then(data => {
+                console.log("Received message:", data.message);
                 this.add.text(centerX, centerY, data.message, {
                     fontSize: '24px',
                     fill: '#FF69B4',
@@ -22,11 +26,12 @@ class Messages extends Phaser.Scene {
                 }).setOrigin(0.5);
             })
             .catch(err => {
-                console.error(err);
+                console.error("Fetch failed:", err);
                 this.add.text(centerX, centerY, 'Could not load message 💔', {
                     fontSize: '24px',
                     fill: '#FF0000'
                 }).setOrigin(0.5);
             });
     }
+
 }
