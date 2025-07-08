@@ -20,7 +20,7 @@ export default async function handler(req, res) {
             "You and I can do anything and everything together and can't wait for our future together.",
             "You are the most beautiful girl ever and you always make me so happy whenever I look at you.",
             "I always feel so happy everytime I open up my phone and get to see a picture of you. Sometimes \
-            I just stare at my lockscreen and think about how luckly I am and how much I miss you."
+            I just stare at my lockscreen and think about how lucky I am and how much I miss you."
         ];
         return loveMessages[Math.floor(Math.random() * loveMessages.length)];
     }
