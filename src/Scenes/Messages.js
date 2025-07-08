@@ -7,7 +7,8 @@ class Messages extends Phaser.Scene {
         const centerX = this.cameras.main.centerX;
         const centerY = this.cameras.main.centerY;
 
-        this.add.text(centerX, centerY - 100, 'Loading love message❤️❤️❤️', {
+        // Store a reference to the loading text
+        const loadingText = this.add.text(centerX, centerY - 100, 'Loading love message❤️❤️❤️', {
             fontSize: '32px',
             fill: '#FFFFFF'
         }).setOrigin(0.5);
@@ -18,6 +19,9 @@ class Messages extends Phaser.Scene {
                 return res.json();
             })
             .then(data => {
+                // Remove the loading text
+                loadingText.destroy();
+
                 console.log("Received message:", data.message);
                 this.add.text(centerX, centerY, data.message, {
                     fontSize: '24px',
