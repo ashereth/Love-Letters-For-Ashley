@@ -39,7 +39,7 @@ export default async function handler(req, res) {
     }
 
     const data = await response.json();
-    const message = data?.choices?.[0]?.message?.content?.trim() || "Love is in the air ❤️";
+    const message = data?.choices?.[0]?.message?.content?.trim() || "Love is in the air";
 
     res.status(200).json({ message });
 
