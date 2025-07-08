@@ -1,14 +1,12 @@
 export default async function handler(req, res) {
-    // ✅ Allow cross-origin requests
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-
-    // ✅ Handle CORS preflight
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     if (req.method === 'OPTIONS') {
         res.status(200).end();
         return;
     }
+    res.status(200).json({ message: "Hi Ashley ❤️" });
 
     const apiKey = process.env.OPENAI_API_KEY;
 
