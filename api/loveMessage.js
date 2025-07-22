@@ -4,6 +4,10 @@ export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
     const generateLoveMessage = () => {
+        // after a 1 second delay, return a random love message
+        // this simulates a delay like fetching from a database or an API
+        const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+        delay(1000);
         const loveMessages = [
             "I miss you so much Ashley❤️.",
             "I love you more than anything.",
