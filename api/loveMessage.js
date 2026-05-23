@@ -24,7 +24,7 @@ export default async function handler(req, res) {
       "I really like all the pictures you draw you are so talented and creative and you really do impress me all the time.",
       "I have had such an amazing time living with you in Seattle and I am always so happy thinking about \
       how everything is just working out for us.",
-      "I am really looking forward to our trip to Beliz (I wrote this on the place to Belize teehee).",
+      "I am really looking forward to our trip to Belize (I wrote this on the place to Belize teehee).",
     ];
     return loveMessages[Math.floor(Math.random() * loveMessages.length)];
   };
